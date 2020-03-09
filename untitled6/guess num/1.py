@@ -30,8 +30,6 @@ def main():
         lis = number()
         a = lis[0]
         i += lis[1]
-        print(a)
-        print(i, '次')
         if num > a:
             print('你的数字太少了.')
         elif num < a:
