@@ -36,19 +36,26 @@ def main():
             print('你的数字太大了!')
         elif num == a:
             print(f'你猜对了,猜了{i}次')
-            bingo = True
+            return i
 
 
 def time():
-    main()
+    global b
+    name = input('请输入你的名字：')
+    lis = main()
+    print(type(lis))
     count = 0
     while True:
         count += 1
+        # avg = sum(lis) / len(lis)
+        print(f'{name}你玩了{count}轮.最少{b}次猜到答案。平均用了次猜出答案。')
         a = input('如果继续按"y",其它键退出.')
+        b = [lis]
         if a == 'y':
-            main()
+            lis = main()
+            b = b.append(lis)
+            print(b)
         else:
-            print(f'你玩了{count}次.')
             break
 
 
