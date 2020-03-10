@@ -34,8 +34,6 @@ while True:
     else:
         print(f'--------------现在进行，第{r}轮-------------------')
 avg = "%.2f" % f
-user = 0
 with open('game_one_user.txt', 'a') as f:
-    user
     data = f'------我是分界线，{name}玩家数据------\n玩家:{name} \n玩了多少轮：{r-1} \n最少几次猜出答案：{min(counts)} \n平均几次猜出答案：{avg}\n'
     f.write(data)
